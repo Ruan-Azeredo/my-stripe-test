@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "dev": "turbo run dev"
+  },
+  "name": "stripe-test",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Ruan Azeredo",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  },
+  "packageManager": "npm@8.5.0",
+
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
