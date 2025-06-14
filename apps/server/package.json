@@ -1,5 +1,4 @@
 {
-  "type": "module", 
   "name": "stripe-test",
   "version": "1.0.0",
   "main": "index.js",
@@ -9,5 +8,9 @@
   },
   "author": "Ruan Azeredo",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "stripe": "^18.2.1"
+  }
 }
