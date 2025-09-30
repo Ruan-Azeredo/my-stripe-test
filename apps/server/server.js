@@ -30,7 +30,17 @@ app.post("/api/stripe/webhook", bodyParser.raw({ type: "application/json" }), (r
 
     console.log("Compra confirmada para:", userEmail);
 
-    // TODO: Atualizar o campo do usuário no banco aqui
+    // Update user in the database (pseudo-code)
+// db.updateUser(stripeCustomerId, userEmail);
+
+if (!event.type) {
+    return res.status(400).send('Missing event type');
+}
+
+if (event.type !== 'checkout.session.completed') {
+    console.log('Unhandled event type:', event.type);
+    return res.status(200).send('Event type not handled');
+}
   }
 
   res.json({ received: true });
